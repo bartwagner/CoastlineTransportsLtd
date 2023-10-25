@@ -1,0 +1,12 @@
+Create library
+python3 -m venv ./venv
+
+Verify python version
+python --version
+
+
+Activate virtual environments
+./venv/Scripts/activate.ps1
+
+Deactivate
+deactivate
