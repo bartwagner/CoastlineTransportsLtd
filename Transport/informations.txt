@@ -4,9 +4,33 @@ python3 -m venv ./venv
 Verify python version
 python --version
 
-
 Activate virtual environments
 ./venv/Scripts/activate.ps1
 
 Deactivate
 deactivate
+
+pip freeze
+
+import django:
+pip install django
+
+create the project
+django-admin startproject robertVictoriaTransport .
+
+run server:
+python manage.py runserver
+
+create the pages infrastruture:
+python manage.py startapp pages
+
+Pep8 for python
+pip install autopep8
+
+Collect the CSS, JavaScript, Images
+python manage.py collectstatic
+
+
+Languagens and tools
+Django
+Python with autopep8
