@@ -34,3 +34,4 @@ python manage.py collectstatic
 Languagens and tools
 Django
 Python with autopep8
+

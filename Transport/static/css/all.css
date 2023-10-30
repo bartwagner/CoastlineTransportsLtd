@@ -13,9 +13,67 @@
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1; }
+  line-height: 1;
+}
 
-.fa-lg {
+/* ---------------------------------------- Top bar ---------------------------------------- */
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-phone-slash:before {
+  content: "\f3dd"; 
+}
+.fa-phone-square:before {
+  content: "\f098";
+}
+.fa-phone-volume:before {
+  content: "\f2a0";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-text:before {
+  content: "\f658";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+.fa-facebook-messenger:before {
+  content: "\f39f";
+}
+.fa-facebook-square:before {
+  content: "\f082";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+
+/* ---------------------------------------- Nav bar ---------------------------------------- */
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-sign-in-alt:before {
+  content: "\f2f6";
+}
+
+
+
+
+
+  .fa-lg {
   font-size: 1.33333em;
   line-height: 0.75em;
   vertical-align: -.0667em; }
@@ -1216,12 +1274,6 @@ readers do not read off random characters that represent icons */
 .fa-envelope:before {
   content: "\f0e0"; }
 
-.fa-envelope-open:before {
-  content: "\f2b6"; }
-
-.fa-envelope-open-text:before {
-  content: "\f658"; }
-
 .fa-envelope-square:before {
   content: "\f199"; }
 
@@ -1281,18 +1333,6 @@ readers do not read off random characters that represent icons */
 
 .fa-eye-slash:before {
   content: "\f070"; }
-
-.fa-facebook:before {
-  content: "\f09a"; }
-
-.fa-facebook-f:before {
-  content: "\f39e"; }
-
-.fa-facebook-messenger:before {
-  content: "\f39f"; }
-
-.fa-facebook-square:before {
-  content: "\f082"; }
 
 .fa-fast-backward:before {
   content: "\f049"; }
@@ -1906,9 +1946,6 @@ readers do not read off random characters that represent icons */
 .fa-info-circle:before {
   content: "\f05a"; }
 
-.fa-instagram:before {
-  content: "\f16d"; }
-
 .fa-internet-explorer:before {
   content: "\f26b"; }
 
@@ -2070,12 +2107,6 @@ readers do not read off random characters that represent icons */
 
 .fa-link:before {
   content: "\f0c1"; }
-
-.fa-linkedin:before {
-  content: "\f08c"; }
-
-.fa-linkedin-in:before {
-  content: "\f0e1"; }
 
 .fa-linode:before {
   content: "\f2b8"; }
@@ -2512,18 +2543,6 @@ readers do not read off random characters that represent icons */
 .fa-phoenix-squadron:before {
   content: "\f511"; }
 
-.fa-phone:before {
-  content: "\f095"; }
-
-.fa-phone-slash:before {
-  content: "\f3dd"; }
-
-.fa-phone-square:before {
-  content: "\f098"; }
-
-.fa-phone-volume:before {
-  content: "\f2a0"; }
-
 .fa-php:before {
   content: "\f457"; }
 
@@ -2544,15 +2563,6 @@ readers do not read off random characters that represent icons */
 
 .fa-pills:before {
   content: "\f484"; }
-
-.fa-pinterest:before {
-  content: "\f0d2"; }
-
-.fa-pinterest-p:before {
-  content: "\f231"; }
-
-.fa-pinterest-square:before {
-  content: "\f0d3"; }
 
 .fa-place-of-worship:before {
   content: "\f67f"; }
@@ -2907,9 +2917,6 @@ readers do not read off random characters that represent icons */
 
 .fa-sign:before {
   content: "\f4d9"; }
-
-.fa-sign-in-alt:before {
-  content: "\f2f6"; }
 
 .fa-sign-language:before {
   content: "\f2a7"; }
@@ -3412,12 +3419,6 @@ readers do not read off random characters that represent icons */
 .fa-twitch:before {
   content: "\f1e8"; }
 
-.fa-twitter:before {
-  content: "\f099"; }
-
-.fa-twitter-square:before {
-  content: "\f081"; }
-
 .fa-typo3:before {
   content: "\f42b"; }
 
@@ -3513,9 +3514,6 @@ readers do not read off random characters that represent icons */
 
 .fa-user-ninja:before {
   content: "\f504"; }
-
-.fa-user-plus:before {
-  content: "\f234"; }
 
 .fa-user-secret:before {
   content: "\f21b"; }
