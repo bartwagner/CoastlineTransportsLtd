@@ -1,36 +1,37 @@
+{% load static %}
 <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo.png" class="logo" alt="">
+        <img src="{% static 'img/logo.jpg' %}" class="logo" alt="">
+        Discovery Bus Ltd.
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="register.html">
+              <i class="fas fa-user-plus"></i>Register
+            </a>
+          </li>
           <li class="nav-item active mr-3">
-            <a class="nav-link" href="safety.html">Safety</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="schedules.html">Schedules</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="fares.html">Fares</a>
+            <a class="nav-link" href="login.html">
+              <i class="fas fa-sign-in-alt"></i>Login
+            </a>
           </li>
           <li class="nav-item mr-3">
             <a class="nav-link" href="faq.html">FAQ's</a>
           </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
           <li class="nav-item mr-3">
-            <a class="nav-link" href="register.html">
-              <i class="fas fa-user-plus"></i> Register</a>
+            <a class="nav-link" href="safety.html">Safety</a>
           </li>
           <li class="nav-item mr-3">
-            <a class="nav-link" href="login.html">
-              <i class="fas fa-sign-in-alt"></i>
-              Login</a>
+            <a class="nav-link" href="shipping.html">Shipping</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="charterBus.html">Charter a Bus</a>
           </li>
         </ul>
       </div>

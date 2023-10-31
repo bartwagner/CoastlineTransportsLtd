@@ -297,16 +297,18 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h2, h3, h4, h5, h6,
+.h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
-
+  
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem; 
+  font-family: 'Aldrich', sans-serif;
+}
 
 h2, .h2 {
   font-size: 2rem; }
@@ -4278,7 +4280,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #355E3B !important; }
+  background-color: #424761 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,

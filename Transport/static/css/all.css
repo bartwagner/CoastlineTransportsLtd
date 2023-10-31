@@ -17,18 +17,6 @@
 }
 
 /* ---------------------------------------- Top bar ---------------------------------------- */
-.fa-phone:before {
-  content: "\f095";
-}
-.fa-phone-slash:before {
-  content: "\f3dd"; 
-}
-.fa-phone-square:before {
-  content: "\f098";
-}
-.fa-phone-volume:before {
-  content: "\f2a0";
-}
 .fa-envelope-open:before {
   content: "\f2b6";
 }
