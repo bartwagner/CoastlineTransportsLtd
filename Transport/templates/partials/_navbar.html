@@ -1,39 +1,59 @@
 {% load static %}
 <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="{% static 'img/logo.jpg' %}" class="logo" alt="">
-        Discovery Bus Ltd.
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="register.html">
-              <i class="fas fa-user-plus"></i>Register
-            </a>
-          </li>
-          <li class="nav-item active mr-3">
-            <a class="nav-link" href="login.html">
-              <i class="fas fa-sign-in-alt"></i>Login
-            </a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="faq.html">FAQ's</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="safety.html">Safety</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="shipping.html">Shipping</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="charterBus.html">Charter a Bus</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">
+      <img src="{% static 'img/logo.jpg' %}" class="logo" alt="">
+      Discovery Bus Ltd.
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li
+          {% if 'faq' in request.path %}
+            class="nav-item active mr-3"
+          {% else %}
+            class="nav-item mr-3"
+          {% endif %}
+        >
+          <a class="nav-link" href="{% url 'faq' %}">FAQ's</a>
+        </li>
+        <li
+          {% if 'safety' in request.path %}
+            class="nav-item active mr-3"
+          {% else %}
+            class="nav-item mr-3"
+          {% endif %}
+        >
+          <a class="nav-link" href="{% url 'safety' %}">Safety</a>
+        </li>
+        <li
+          {% if 'shipping' in request.path %}
+            class="nav-item active mr-3"
+          {% else %}
+            class="nav-item mr-3"
+          {% endif %}
+        >
+          <a class="nav-link" href="{% url 'shipping' %}">Shipping</a>
+        </li>
+        <li 
+          {% if 'charterBus' in request.path %}
+            class="nav-item active mr-3"
+          {% else %}
+            class="nav-item mr-3"
+          {% endif %}
+        >
+          <a class="nav-link" href="{% url 'charterBus' %}">Charter a Bus</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
