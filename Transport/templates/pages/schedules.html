@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section id="show-welcome" class="show-welcome-schedules">
+        <div class="img-org">
+            <div class="col-md-8 offset-md-2 border-line">
+                <h1>Schedules</h1>
+                <h2>Our routes are designed with you in mind.</h2>
+                <h2>Your time is valueable.</h2>
+                <h2>Very few stops between destinations.</h2>
+            </div>
+            <div>
+                <a href="{% url 'bookTrip' %}" class="btn btn-primary">Book Trip</a>
+            </div>
+        </div>
+    </section>
+    <section id="discoveryInfo" class="py-5 text-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Discovery Bus ltd. offers a convenient and confortable way to travel around the Island, with services between Victoria, Port Hardy, and Tofino.</p>
+                    <h1>Let us take you there.</h1>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3>Nanaimo - Victoria</h3>
+                    <p>4 trip a day</p>
+                    <p>Each day</p>
+                    <p>Monday to Friday</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Nanaimo - Campbell</h3>
+                    <p>4 trip a day</p>
+                    <p>Each day</p>
+                    <p>Monday to Friday</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Nanaimo - Tofino</h3>
+                    <p>2 trip a day</p>
+                    <p>Each day</p>
+                    <p>Saturday and Sunday</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="py-5 text-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Travel Information</h1>
+                    <hr>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-luggage-cart fa-4x"></i>
+                    <hr>
+                    <h3>LUGGAGE</h3>
+                    <p>1 large or 2 small luggage per passenger.</p>
+                    <p>Bikes & surfboards welcome</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-frog fa-4x"></i>
+                    <hr>
+                    <h3>PETS</h3>
+                    <p>Unfurtnately our vehicles are not equiped to carrie any pets.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-wheelchair fa-4x"></i>
+                    <hr>
+                    <h3>ACCESSIBILITY</h3>
+                    <p>Unfurtnately our vehicles are not equiped for wheel chair access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

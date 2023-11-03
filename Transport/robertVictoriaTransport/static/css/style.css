@@ -2,7 +2,16 @@
 img {
   width: 100%;
 }
-
+.text-link{
+  font-weight: bold;
+  color:#0066cc;
+}
+.text-link-und{
+  text-decoration: underline;
+}
+.text-bold{
+  font-weight: bold;
+}
 /* ---------------------------------------- Nav bar ---------------------------------------- */
 .logo {
   width: 80px;
@@ -17,7 +26,6 @@ img {
 
 /* ----------------------------------------- Index ----------------------------------------- */
 #show-welcome {
-  background-image: url('../img/mario-mendez-MxxLminkATY-unsplash.jpg');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -27,6 +35,16 @@ img {
   text-shadow: 1px 1px 2px #000, 0 0 1em #000, 0 0 0.2em #000;
   padding-top: 6rem;
 }
+.show-welcome-index{
+  background-image: url('../img/mario-mendez-MxxLminkATY-unsplash.jpg');
+}
+.show-welcome-tickets{
+  background-image: url('../img/armon-arani-Zu4L4ERl_sw-unsplash.jpg');
+}
+.show-welcome-schedules{
+  background-image: url('../img/matt-brett-m4UTb5H6EwA-unsplash.jpg');
+}
+
 .border-line {
   padding: 3% 1%;
   border-left: 5px ridge #fff;
@@ -35,7 +53,23 @@ img {
   display: flex;
   align-items: center;
 }
-
+#services {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed/cover;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden; 
+}
+#services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
 
 
 
@@ -49,42 +83,6 @@ img {
 
 .btn-secondary {
   color: #fff !important; }
-
-#services {
-  background-image: url('../img/building.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: fixed/cover;
-  min-height: 300px;
-  position: relative;
-  overflow: hidden; }
-  #services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 100%;
-    background: rgba(32, 134, 107, 0.8); }
-
-#showcase-inner {
-  background-image: url('../img/building.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: fixed/cover;
-  position: relative;
-  overflow: hidden;
-  min-height: 200px; }
-  #showcase-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 100%;
-    background: rgba(32, 134, 107, 0.8); }
-  #showcase-inner.showcase-search {
-    min-height: 270px; }
 
 #work {
   padding: 6rem 0; }

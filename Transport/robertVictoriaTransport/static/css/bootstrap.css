@@ -1629,13 +1629,13 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #549f87;
   border-color: #549f87;
-  padding: 10% 30%;
+  padding: 10px 30px;
 }
 .btn-primary:hover {
   color: #fff;
   background-color: #00d084;
   border-color: #00d084;
-  padding: 10% 30%;
+  padding: 10px 30px;
 }
 
 .btn-secondary {
