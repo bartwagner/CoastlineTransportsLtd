@@ -6,25 +6,17 @@ img {
   font-weight: bold;
   color:#0066cc;
 }
-.text-link-und{
+.text-und{
   text-decoration: underline;
 }
 .text-bold{
   font-weight: bold;
 }
+
 /* ---------------------------------------- Nav bar ---------------------------------------- */
 .logo {
   width: 80px;
 }
-.navbar {
-  opacity: 0.9;
-  text-transform: uppercase; 
-}
-.social a {
-  margin-right: 0.4rem;
-}
-
-/* ----------------------------------------- Index ----------------------------------------- */
 #show-welcome {
   background-repeat: no-repeat;
   background-position: top center;
@@ -35,14 +27,17 @@ img {
   text-shadow: 1px 1px 2px #000, 0 0 1em #000, 0 0 0.2em #000;
   padding-top: 6rem;
 }
+.navbar {
+  opacity: 0.9;
+  text-transform: uppercase; 
+}
+.social a {
+  margin-right: 0.4rem;
+}
+
+/* ----------------------------------------- Index ----------------------------------------- */
 .show-welcome-index{
   background-image: url('../img/mario-mendez-MxxLminkATY-unsplash.jpg');
-}
-.show-welcome-tickets{
-  background-image: url('../img/armon-arani-Zu4L4ERl_sw-unsplash.jpg');
-}
-.show-welcome-schedules{
-  background-image: url('../img/matt-brett-m4UTb5H6EwA-unsplash.jpg');
 }
 .border-line {
   padding: 3% 1%;
@@ -69,6 +64,70 @@ img {
   width: 100%;
   background: rgb(255, 255, 255);
 }
+
+/* -----------------------------------------Tickets----------------------------------------- */
+.show-welcome-tickets{
+  background-image: url('../img/armon-arani-Zu4L4ERl_sw-unsplash.jpg');
+}
+
+/* ----------------------------------------Schedules---------------------------------------- */
+.show-welcome-schedules{
+  background-image: url('../img/matt-brett-m4UTb5H6EwA-unsplash.jpg');
+}
+
+/* --------------------------------------- Contact Us--------------------------------------- */
+.show-welcome-contactUs{
+  background-image: url('../img/parliament-building-floating-houses-and-butchart-gardens-victoria.jpg');
+}
+
+/* --------------------------------------- Book Trip --------------------------------------- */
+.show-welcome-bookTrip{
+  background-image: url('../img/vancouver-island.jpg');
+}
+
+/* ---------------------------------------- Register---------------------------------------- */
+.show-welcome-register{
+  background-image: url('../img/Ucluelet-Vancouver-Island-BC.jpg');
+}
+
+/* ----------------------------------------- Login ----------------------------------------- */
+.show-welcome-login{
+  background-image: url('../img/cruise-scenery-and-wildlife-sights-bc-vancouver-island.jpg');
+}
+
+/* ------------------------------------------ Faq ------------------------------------------ */
+.show-welcome-faq{
+  background-image: url('../img/inside-passage-mountain-and-luscious-scenery.jpg');
+}
+
+/* ----------------------------------------- Safety----------------------------------------- */
+.show-welcome-safety{
+  background-image: url('../img/nanaimo-and-campbell-river-scenery-bc.jpg');
+}
+
+/* ---------------------------------------- Shipping---------------------------------------- */
+.show-welcome-shipping{
+  background-image: url('../img/Victoria-BC-summer-activities-1030x604.jpg');
+}
+
+/* -------------------------------------- Charter Bus -------------------------------------- */
+.show-welcome-charterBus{
+  background-image: url('../img/756aa5bc-d7a6-4f3e-bc70-480b3a18307c.jpg');
+}
+
+/* ------------------------------------- Privacy Policy------------------------------------- */
+.show-welcome-privacyPolicy{
+  background-image: url('../img/Erik_Lawrenz_16_hero21.jpg');
+}
+
+/* ------------------------------------ Terms Conditions------------------------------------ */
+.show-welcome-termsConditions{
+  background-image: url('../img/malahatskywalk-tower-hero.2400x1267.jpg');
+}
+
+
+
+
 
 
 

@@ -1637,6 +1637,20 @@ fieldset:disabled a.btn {
   border-color: #00d084;
   padding: 10px 30px;
 }
+.btn-primary-sec {
+  color: #fff;
+  background-color: #549f87;
+  border-color: #549f87;
+  padding: 10px 36px;
+  margin-top: 10px;
+}
+.btn-primary-sec:hover {
+  color: #fff;
+  background-color: #00d084;
+  border-color: #00d084;
+  padding: 10px 36px;
+  margin-top: 10px;
+}
 
 .btn-secondary {
   color: #212529;

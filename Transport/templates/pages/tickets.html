@@ -4,12 +4,13 @@
         <div class="img-org">
             <div class="col-md-8 offset-md-2 border-line">
                 <h1>Tickets</h1>
-                <h2>We make payment easy and simple</h2>
-                <h2>Your satisfaction is our commitment</h2>
+                <h2>We make your trip easy and simple.</h2>
                 <h2>Pay online or at the bus.</h2>
             </div>
             <div>
-                <a href="{% url 'bookTrip' %}" class="btn btn-primary">Book Trip</a>
+                <a href="{% url 'contactUs' %}" class="btn btn-primary">Contact Us</a>
+                <br />
+                <a href="{% url 'bookTrip' %}" class="btn btn-primary-sec">Book Trip</a>
             </div>
         </div>
     </section>
@@ -19,20 +20,21 @@
                 <div class="col-md-12">
                     <h1>Buying a ticket</h1>
                     <p>You can purchase your ticket online by <a class="text-link" href="{% url 'bookTrip' %}">Booking a trip</a>, or pay at the bus, with a debt or credit card.</p>
-                    <p>Online booking can be made up to 2 hr before the chosen deprature time. </p>
-                    <p>Unfurtnately for safety reasons, our drivers are not allowed to accept cash payments.</p>
+                    <p>Online booking can be made up to 1 hour before the chosen departure time.</p>
+                    <p>Unfortunately for safety reasons, our drivers are not allowed to accept cash payments.</p>
                     <h1>Discounted Tickets</h1>
-                    <p>BC Residents and passenger 65 years or older, with a valid form of governamental issued ID, with photo and birthdate, are eleigible for a 10% discount on any ticket, to any of our intinerary.</p>
+                    <p>BC Residents and passenger 65 years or older, with a valid form of governamental issued ID, with photo and birthdate, are eleigible for a 10% discount on any ticket, to any of our destinations.</p>
                     <p>If you are registered as a "loyal customer" you are elegible for a free ticket too</p>
                     <h1>Changes and Cancelations</h1>
-                    <p>You can <a class="text-link" href="{% url 'cancelChangesReserve' %}">cancel or make changes to your reservantion</a> up to 6 hours before the depature time of your <a class="text-link-und" href="{% url 'bookTrip' %}">online purchased ticket</a>.</p>
+                    <p>You can <a class="text-link" href="{% url 'login' %}">cancel or make changes to your reservantion</a> up to 6 hours before the depature time of your ticket <span class="text-und">purchased online</span>.</p>
+                    <p>If you are a registered for loyalty program, you can change or cancel up to 2 hours before departure time.</p>
                     <p>You can not cancel or make changes to tickets purchased at the bus.</p>
-                    <h1>Late & no Show Policy</h1>
+                    <h1>If you are late</h1>
                     <p>If you are late and miss the bus, we may be able to accommodate you on the next bus on the same day to the same destination, if space is available.</p>
-                    <p>You must call us to let us know you will not make it on time, so we can hold a seat on the next bus if still available at the time you contact us.</p>
-                    <p><span class="text-bold">As a courtesy</span>, our drivers will always wait for 5 extra minutes after departure time, in case any of our passengers with a reservation is late. But never any longer than 5 minutes, as we need to maintain our schedules.</p>
-                    <p>Unfurtnalety If you don’t show up for the trip, you will loose your ticket. Unless you can proove to us you had a conciderable reason to not be able to make to the bus on time.</p>
-                    <p>Send us an email to <a class="text-link" href="mailto:info@discoverybus.ca?subject=suject text">info@discoverybus.ca</a> with your explanation and we will respond to your inquiry.</p>
+                    <p>You must call us as soon as possible to let us know you will be late, so we can hold an available seat on the next bus for you.</p>
+                    <p><span class="text-bold">As a courtesy</span>, our drivers will wait for 5 extra minutes after departure time, if you call and let us know you are coming drivers will not waite any longer than 5 minutes, as we need to maintain our schedules.</p>
+                    <p>Unfortunately  If you don’t show up for the trip, you will loose your ticket. Unless you can proove to us you had a conciderable reason to have missed the bus.</p>
+                    <p>Send us an email to <a class="text-link" href="{% url 'contactUs' %}">info@discoverybus.ca</a> with your explanation and we will respond to your inquiry.</p>
                 </div>
             </div>
         </div>

@@ -14,11 +14,6 @@ urlpatterns = [
     path('schedules', views.schedules, name='schedules'),
     path('bookTrip', views.bookTrip, name='bookTrip'),
     path('contactUs', views.contactUs, name='contactUs'),
-
-
-
-    path('loyaltyRegister', views.loyaltyRegister, name='loyaltyRegister'),
     path('privacyPolicy', views.privacyPolicy, name='privacyPolicy'),
-    path('termsConditions', views.termsConditions, name='termsConditions'),
-    path('cancelChangesReserve', views.cancelChangesReserve, name='cancelChangesReserve')
+    path('termsConditions', views.termsConditions, name='termsConditions')
 ]

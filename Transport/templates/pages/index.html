@@ -4,12 +4,13 @@
         <div class="img-org">
             <div class="col-md-8 offset-md-2 border-line">
                 <h1>Connecting the Island</h1>
-                <h2>Reliable and Convenient Transportation</h2>
-                <h2>Safety and Confort are priorities</h2>
-                <h2>Lets us take you there</h2>
+                <h2>Convenient and Confortable Transportation.</h2>
+                <h2>Lets us take you there.</h2>
             </div>
             <div>
-                <a href="{% url 'bookTrip' %}" class="btn btn-primary">Book Trip</a>
+                <a href="{% url 'contactUs' %}" class="btn btn-primary">Contact Us</a>
+                <br />
+                <a href="{% url 'bookTrip' %}" class="btn btn-primary-sec">Book Trip</a>
             </div>
         </div>
     </section>
@@ -20,19 +21,19 @@
                     <i class="fas fa-money-bill fa-4x"></i>
                     <hr>
                     <h3>Tickets</h3>
-                    <p>We make buying tickets easy and simple</p>
+                    <p>You can pay online or at the bus</p>
                 </a>
                 <a class="col-md-4" href="{% url 'schedules' %}">
                     <i class="fas fa-route fa-4x"></i>
                     <hr>
                     <h3>Schedules</h3>
-                    <p>Connectting the Island from coast to coast </p>
+                    <p>From Victoria to Campbell to Tofino</p>
                 </a>
                 <a class="col-md-4" href="{% url 'bookTrip' %}">
                     <i class="fas fa-bus fa-4x"></i>
                     <hr>
                     <h3>Book Trip</h3>
-                    <p>Make a reservation up to 2 hrs before departure</p>
+                    <p>Reserve your seat at any time</p>
                 </a>
             </div>
         </div>
@@ -43,12 +44,10 @@
                 <div class="col-md-12">
                     <h1>Loyalty Program</h1>
                     <hr>
-                    <p>Register with us today and take advantage of our loyalty program As a loyal customer you will be able to :</p>
-                    <p>Track and print all your trips and receipts online.</p>
-                    <p>Make changes to your reservations upt to 24 hrs before departure.</p>
-                    <p>Get a free trip to any of our connections for every 5 tickets purchased.</p>
-                    <p>Get 10% discount on your tickets when you travel with a family member.</p>
-                    <a href="{% url 'loyaltyRegister' %}" class="btn btn-primary">Register Now</a>
+                    <p>Make changes to your reservations upt to 2 hours before departure time</p>
+                    <p>Get a free trip to any of our connections for every 5 tickets you purchase</p>
+                    <p>Get 10% discount when you travel with a family member</p>
+                    <a href="{% url 'login' %}" class="btn btn-primary">Register Now</a>
                 </div>
             </div>
         </div>

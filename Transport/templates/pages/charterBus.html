@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>charter a Bus</h1>
+    <section id="show-welcome" class="show-welcome-charterBus">
+        <div class="img-org">
+            <div class="col-md-8 offset-md-2 border-line">
+                <h1>Charter Services</h1>
+                <h2>---</h2>
+            </div>
+            <div>
+                <a href="{% url 'contactUs' %}" class="btn btn-primary">Contact Us</a>
+                <br />
+                <a href="{% url 'bookTrip' %}" class="btn btn-primary-sec">Book Trip</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -35,19 +35,8 @@ def bookTrip(request):
 def contactUs(request):
     return render(request, 'pages/contactUs.html')
 
-
-
-
-
-
-def loyaltyRegister(request):
-    return render(request, 'pages/loyaltyRegister.html')
-
 def privacyPolicy(request):
     return render(request, 'pages/privacyPolicy.html')
 
 def termsConditions(request):
     return render(request, 'pages/termsConditions.html')
-
-def cancelChangesReserve(request):
-    return render(request, 'pages/cancelChangesReserve.html')
