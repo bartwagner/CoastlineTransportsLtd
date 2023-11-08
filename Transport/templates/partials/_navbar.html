@@ -57,13 +57,13 @@
           <a class="nav-link" href="{% url 'shipping' %}">Shipping with us</a>
         </li>
         <li 
-          {% if 'charterBus' in request.path %}
+          {% if 'charterbus' in request.path %}
             class="nav-item active mr-3"
           {% else %}
             class="nav-item mr-3"
           {% endif %}
         >
-          <a class="nav-link" href="{% url 'charterBus' %}">Charter a bus</a>
+          <a class="nav-link" href="{% url 'charterbus' %}">Charter a bus</a>
         </li>
       </ul>
     </div>

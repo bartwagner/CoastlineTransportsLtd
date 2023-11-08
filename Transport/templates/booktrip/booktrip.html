@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section id="show-welcome" class="show-welcome-bookTrip">
+        <div class="img-org">
+            <div class="col-md-8 offset-md-2 border-line">
+                <h1>Reservations</h1>
+                <h2>It's a good idea to secure your seat.</h2>
+                <h2>You can actually pick a seat.</h2>
+            </div>
+            <div>
+                <a href="{% url 'contactus' %}" class="btn btn-primary">Contact Us</a>
+                <br />
+                <a href="{% url 'booktrip' %}" class="btn btn-primary-sec">Book Trip</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

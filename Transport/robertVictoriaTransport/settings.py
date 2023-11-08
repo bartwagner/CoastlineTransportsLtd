@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,6 +34,18 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'booktrip.apps.BooktripConfig',
+    'contactus.apps.ContactusConfig',
+    'charterbus.apps.CharterbusConfig',
+    'faq.apps.FaqConfig',
+    'login.apps.LoginConfig',
+    'privacypolicy.apps.PrivacypolicyConfig',
+    'register.apps.RegisterConfig',
+    'schedules.apps.SchedulesConfig',
+    'safety.apps.SafetyConfig',
+    'shipping.apps.ShippingConfig',
+    'termsconditions.apps.TermsconditionsConfig',
+    'tickets.apps.TicketsConfig',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -126,3 +139,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+#Email config
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMIAL_PORT = config('EMIAL_PORT')
+EMAIL_HOST = config('EMAIL_HOST')
