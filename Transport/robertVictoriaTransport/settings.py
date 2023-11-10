@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'shipping.apps.ShippingConfig',
     'termsconditions.apps.TermsconditionsConfig',
     'tickets.apps.TicketsConfig',
+    'widget_tweaks',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -141,6 +142,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #Email config
+DEFAULT_FROM_EMAIL = 'info@discoverybus.ca'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

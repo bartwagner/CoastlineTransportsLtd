@@ -30,8 +30,30 @@ pip install autopep8
 Collect the CSS, JavaScript, Images
 python manage.py collectstatic
 
+.fa-suitcase:before {
+  content: "\f0f2"; }
+
 
 Languagens and tools
 Django
 Python with autopep8
+
+
+
+
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        ticket = request.POST['ticket']
+        message = request.POST['message']
+    send_mail('New Question Costumer - ' + name, 
+              'Ticket= ' + ticket + '\n' + 'Phone= ' + phone + '\n' + 'Message:'+ '\n' + message, 
+              email, 
+              ['info@discoverybus.ca']
+    )
+
+    messages.success(request, 'Thanks for your message')
+
+
 
