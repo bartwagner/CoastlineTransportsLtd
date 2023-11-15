@@ -9,17 +9,19 @@ def index(request):
     return render(request, 'contactus/contactus.html', {'form': form})
 
 def email(request):
-    if request.method == 'POST':
+    form = contactUsForm(request.POST)
+    if form.is_valid():
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
         ticket = request.POST['ticket']
         message = request.POST['message']
-    send_mail('New Question Costumer - ' + name, 
-              'Ticket= ' + ticket + '\n' + 'Phone= ' + phone + '\n' + 'Message:'+ '\n' + message, 
-              email, 
-              ['info@discoverybus.ca']
-    )
-
-    messages.success(request, 'Thanks for your message')
+        send_mail('New Question Costumer - ' + name, 
+                'Ticket= ' + ticket + '\n' + 'Phone= ' + phone + '\n' + 'Message:'+ '\n' + message, 
+                email, 
+                ['info@discoverybus.ca']
+        )
+        messages.success(request, 'Thanks for your message ' + name +', We will be in contact soon')
+        return redirect('contactus')
+    messages.error(request, 'There was something wrong')
     return redirect('contactus')

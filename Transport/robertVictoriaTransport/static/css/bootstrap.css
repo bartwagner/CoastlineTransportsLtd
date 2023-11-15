@@ -3516,13 +3516,13 @@ input[type="button"].btn-block {
   .alert-warning .alert-link {
     color: #533f03; }
 
-.alert-danger {
+.alert-error {
   color: #792424;
   background-color: #fbdada;
   border-color: #f9cbcb; }
-  .alert-danger hr {
+  .alert-error hr {
     border-top-color: #f6b4b4; }
-  .alert-danger .alert-link {
+  .alert-error .alert-link {
     color: #521818; }
 
 .alert-light {

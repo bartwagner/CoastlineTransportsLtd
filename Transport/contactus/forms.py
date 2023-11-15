@@ -11,7 +11,8 @@ class contactUsForm(forms.Form):
                              label="E-mail:"
                             )
     phone = forms.CharField(
-                            widget=forms.TextInput(attrs={"type": "tel"}),
+                            widget=forms.TextInput(attrs={"type": "tel", "maxlength": "14", "onkeyup": "handlePhone(event)"}),
+                            required=False,
                             label="Phone:"
                            )
     ticket = forms.CharField(
