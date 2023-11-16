@@ -3,7 +3,7 @@ document.querySelector('.year').innerHTML = date.getFullYear();
 
 setTimeout(function(){
     $('#message').fadeOut('slow');
-}, 20000);
+}, 8000);
 
 const handlePhone = (event) => {
     let input = event.target
