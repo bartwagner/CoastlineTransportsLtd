@@ -21,12 +21,6 @@ class registerForm(forms.Form):
                              widget=forms.TextInput(attrs={"type": "email"}), 
                              label="Confirm E-mail:"
                             )
-
-
-
-
-
-
     phone = forms.CharField(
                             widget=forms.TextInput(attrs={"type": "tel", "maxlength": "14", "onkeyup": "handlePhone(event)"}),
                             required=False,
@@ -41,10 +35,4 @@ class registerForm(forms.Form):
                             label="Confirm Password"
                            )
     
-    def clean_firstname(self):
-        firstname = self.cleaned_data["firstname"]
-        if firstname == 'wagner':
-            print('erroorrrrr')
-            raise ValidationError(_('Wrong'))
-        else:
-            return firstname
+
