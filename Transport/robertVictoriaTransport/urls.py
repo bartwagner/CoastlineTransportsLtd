@@ -8,6 +8,7 @@ urlpatterns = [
     path('charterbus/', include('charterbus.urls')),
     path('faq/', include('faq.urls')),
     path('login/', include('login.urls')),
+    path('myaccount/', include('myaccount.urls')),
     path('privacypolicy/', include('privacypolicy.urls')),
     path('register/', include('register.urls')),
     path('schedules/', include('schedules.urls')),

@@ -95,6 +95,11 @@ img {
   background-image: url('../img/cruise-scenery-and-wildlife-sights-bc-vancouver-island.jpg');
 }
 
+/* --------------------------------------- My Account--------------------------------------- */
+.show-welcome-myAccount{
+  background-image: url('../img/canada-british-columbia-victoria-best-beaches-cordova-bay-beach.jpg');
+}
+
 /* ------------------------------------------ Faq ------------------------------------------ */
 .show-welcome-faq{
   background-image: url('../img/inside-passage-mountain-and-luscious-scenery.jpg');
