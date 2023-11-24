@@ -15,7 +15,7 @@ def email(request):
         phone = request.POST['phone']
         ticket = request.POST['ticket']
         message = request.POST['message']
-        send_mail('New Question Costumer - ' + name, 
+        send_mail('New Message - ' + name, 
                 'Ticket= ' + ticket + '\n\n' + 'Phone= ' + phone + '\n\n' + 'Message:'+ '\n' + message, 
                 email, 
                 ['info@discoverybus.ca']

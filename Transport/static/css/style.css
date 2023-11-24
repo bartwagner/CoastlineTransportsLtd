@@ -85,11 +85,6 @@ img {
   background-image: url('../img/vancouver-island.jpg');
 }
 
-/* ---------------------------------------- Register---------------------------------------- */
-.show-welcome-register{
-  background-image: url('../img/Ucluelet-Vancouver-Island-BC.jpg');
-}
-
 /* ----------------------------------------- Login ----------------------------------------- */
 .show-welcome-login{
   background-image: url('../img/cruise-scenery-and-wildlife-sights-bc-vancouver-island.jpg');
@@ -107,7 +102,7 @@ img {
 
 /* ----------------------------------------- Safety----------------------------------------- */
 .show-welcome-safety{
-  background-image: url('../img/nanaimo-and-campbell-river-scenery-bc.jpg');
+  background-image: url('../img/Ucluelet-Vancouver-Island-BC.jpg');
 }
 
 /* ---------------------------------------- Shipping---------------------------------------- */

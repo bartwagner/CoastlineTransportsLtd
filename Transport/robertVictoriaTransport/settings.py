@@ -34,14 +34,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'accounts.apps.AccountsConfig',
     'booktrip.apps.BooktripConfig',
     'contactus.apps.ContactusConfig',
     'charterbus.apps.CharterbusConfig',
     'faq.apps.FaqConfig',
-    'login.apps.LoginConfig',
-    'myaccount.apps.MyaccountConfig',
     'privacypolicy.apps.PrivacypolicyConfig',
-    'register.apps.RegisterConfig',
     'schedules.apps.SchedulesConfig',
     'safety.apps.SafetyConfig',
     'shipping.apps.ShippingConfig',
@@ -139,6 +137,12 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'robertVictoriaTransport/static')
 ]
+
+# Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'error'
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

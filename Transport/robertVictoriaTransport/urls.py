@@ -3,14 +3,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('pages.urls')),
+    path('accounts/', include('accounts.urls')),
     path('booktrip/', include('booktrip.urls')),
     path('contactus/', include('contactus.urls')),
     path('charterbus/', include('charterbus.urls')),
     path('faq/', include('faq.urls')),
-    path('login/', include('login.urls')),
-    path('myaccount/', include('myaccount.urls')),
     path('privacypolicy/', include('privacypolicy.urls')),
-    path('register/', include('register.urls')),
     path('schedules/', include('schedules.urls')),
     path('safety/', include('safety.urls')),
     path('shipping/', include('shipping.urls')),
