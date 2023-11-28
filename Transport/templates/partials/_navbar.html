@@ -11,33 +11,47 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav ml-auto">
-        <li
-          {% if 'register' in request.path %}
-            class="nav-item active mr-2"
-          {% else %}
-            class="nav-item mr-2"
-          {% endif %}
-        >
-          <a class="nav-link" href="{% url 'register' %}">Register</a>
-        </li>
-        <li
-          {% if 'myaccount' in request.path %}
-            class="nav-item active mr-2"
-          {% else %}
-            class="nav-item mr-2"
-          {% endif %}
-        >
-          <a class="nav-link" href="{% url 'myaccount' %}">My Account</a>
-        </li>
-        <li
-          {% if 'login' in request.path %}
-            class="nav-item active mr-2"
-          {% else %}
-            class="nav-item mr-2"
-          {% endif %}
-        >
-          <a class="nav-link" href="{% url 'login' %}">Login</a>
-        </li>
+        {% if user.is_authenticated %}
+          <li
+            {% if 'myaccount' in request.path %}
+              class="nav-item active mr-2"
+            {% else %}
+              class="nav-item mr-2"
+            {% endif %}
+          >
+            <a class="nav-link" href="{% url 'myaccount' %}">
+              My Account({{ user.username }})
+            </a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">
+              Logout
+            </a>
+            <form action="{% url 'logout' %}" method="POST" id="logout">
+                {% csrf_token %}
+                <input type="hidden">
+            </form>
+          </li>
+        {% else %}
+          <li
+            {% if 'register' in request.path %}
+              class="nav-item active mr-2"
+            {% else %}
+              class="nav-item mr-2"
+            {% endif %}
+          >
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+          <li
+            {% if 'login' in request.path %}
+              class="nav-item active mr-2"
+            {% else %}
+              class="nav-item mr-2"
+            {% endif %}
+          >
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+        {% endif %}
         <li
           {% if 'faq' in request.path %}
             class="nav-item active mr-2"

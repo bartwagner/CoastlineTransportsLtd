@@ -1,18 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section id="show-welcome" class="show-welcome-login">
-        <div class="img-org">
-            <div class="col-md-8 offset-md-2 border-line">
-                <h1>Your Account</h1>
-                <h2>Print trips and receipts </h2>
-            </div>
-            <div>
-                <a href="{% url 'contactus' %}" class="btn btn-primary">Contact Us</a>
-                <br />
-                <a href="{% url 'booktrip' %}" class="btn btn-primary-sec">Book Trip</a>
-            </div>
-        </div>
-    </section>
     <section id="login" class="bg-light py-5">
         <div class="container">
             <div class="row">
@@ -36,7 +23,9 @@
                                     <label for="password2">Password</label>
                                     <input type="password" name="password" class="form-control" required>
                                 </div>
-                                <input type="submit" value="Login" class="btn btn-secondary btn-block">
+                                <div class="text-center">
+                                    <input type="submit" value="Login" class="btn btn-primary">
+                                </div>
                             </form>
                         </div>
                     </div>
