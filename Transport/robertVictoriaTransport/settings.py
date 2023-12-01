@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'contactus.apps.ContactusConfig',
     'information.apps.InformationConfig',
     'shipping.apps.ShippingConfig',
-    'travel.apps.TravelConfig',
     'widget_tweaks',
     "django.contrib.admin",
     "django.contrib.auth",
