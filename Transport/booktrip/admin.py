@@ -31,4 +31,8 @@ class LocalBoardAdmin(admin.ModelAdmin):
 admin.site.register(LocalBoard, LocalBoardAdmin)
 
 
-admin.site.register(DateTimeTravel)
+#admin.site.register(DateTimeTravel)
+class DateTimeTravelAdmin(admin.ModelAdmin):
+    list_display = ('travel', 'date', 'price')
+    list_filter  = ('travel', 'date', 'price')
+admin.site.register(DateTimeTravel, DateTimeTravelAdmin)

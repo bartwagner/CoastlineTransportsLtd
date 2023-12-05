@@ -35,4 +35,4 @@ class DateTimeTravel(models.Model):
     date = models.DateField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     def __str__(self):
-        return self.date
+        return str(self.travel) + ' | Date: ' +str(self.date) + ' | Price: ' + str(self.price)
