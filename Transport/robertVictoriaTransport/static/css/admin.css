@@ -1,6 +1,6 @@
 #header {
     height: 50px;
-    background: #10284e;
+    background: #424761;
     color: #fff;
 }
 
@@ -14,24 +14,28 @@ a:visited{
 }
 
 div.breadcrumbs {
-    background: #30caa0;
-    color: #10284e;
+    background: #10284e;
+    color: #fff;
 }
 
 div.breadcrumbs a {
-    color: #333;
+    color: #fff;
 }
 
 .module h2, .module caption, .inline-group h2 {
-    background: #30caa0;   
+    background: #10284e;   
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #10284e;
+    background: #549f87;
     color: #fff;
 }
 
 .button.default, input[type=submit].default, .submit-row input.default {
-    background: #10284e;
+    background: #549f87;
     color: #fff;
+}
+
+.logo_admin{
+    width: 60px;
 }
