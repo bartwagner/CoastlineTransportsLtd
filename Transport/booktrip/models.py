@@ -13,7 +13,7 @@ class Travel(models.Model):
     destination = models.CharField(max_length=60)
     time_destination = models.TimeField()
     def __str__(self):
-        return str(self.vehicle) + ' | ' + self.board + ' - ' + str(self.time_board) + ' | ' + self.destination + ' - ' + str(self.time_destination)
+        return self.board + ' - ' + str(self.time_board) + ' | ' + self.destination + ' - ' + str(self.time_destination)
 
 class LocalDestination(models.Model):
     travel = models.ForeignKey(Travel, on_delete=models.DO_NOTHING)
@@ -35,4 +35,4 @@ class DateTimeTravel(models.Model):
     date = models.DateField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     def __str__(self):
-        return str(self.travel) + ' | Date: ' +str(self.date) + ' | Price: ' + str(self.price)
+        return str(self.travel) + ' | Date: ' +str(self.date) + ' | Price: ' + str(self.price) + ' | Sets Available: ' + str(self.sets_available)

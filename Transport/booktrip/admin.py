@@ -10,24 +10,32 @@ from .models import DateTimeTravel
 class VehicleAdmin(admin.ModelAdmin):
     list_display = ('number', 'sets')
     list_filter  = ('number', 'sets')
+    search_fields = ('number', 'sets')
+    list_per_page = 25
 admin.site.register(Vehicle, VehicleAdmin)
 
 #admin.site.register(Travel)
 class TravelAdmin(admin.ModelAdmin):
     list_display = ('vehicle', 'board', 'time_board', 'destination', 'time_destination')
     list_filter  = ('vehicle', 'board', 'time_board', 'destination', 'time_destination')
+    search_fields = ('board','time_board','destination', 'time_destination')
+    list_per_page = 25
 admin.site.register(Travel, TravelAdmin)
 
 #admin.site.register(LocalDestination)
 class LocalDestinationAdmin(admin.ModelAdmin):
     list_display = ('travel', 'local_destination', 'time_destination')
     list_filter  = ('travel', 'local_destination', 'time_destination')
+    search_fields = ('local_destination', 'time_destination')
+    list_per_page = 25
 admin.site.register(LocalDestination, LocalDestinationAdmin)
 
 #admin.site.register(LocalBoard)
 class LocalBoardAdmin(admin.ModelAdmin):
     list_display = ('travel', 'local_board', 'time_board')
     list_filter  = ('travel', 'local_board', 'time_board')
+    search_fields = ('local_board', 'time_board')
+    list_per_page = 25
 admin.site.register(LocalBoard, LocalBoardAdmin)
 
 
@@ -35,4 +43,6 @@ admin.site.register(LocalBoard, LocalBoardAdmin)
 class DateTimeTravelAdmin(admin.ModelAdmin):
     list_display = ('travel', 'date', 'price')
     list_filter  = ('travel', 'date', 'price')
+    search_fields = ('date', 'price')
+    list_per_page = 25
 admin.site.register(DateTimeTravel, DateTimeTravelAdmin)

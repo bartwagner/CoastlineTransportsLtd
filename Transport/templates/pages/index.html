@@ -40,18 +40,49 @@
             </div>
         </div>
     </section>
-    <section id="loyalty" class="py-5 text-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <h1>Loyalty Program</h1>
-                    <hr>
-                    <p>Make changes to your reservations up to 2 hours before departure time</p>
-                    <p>Get a free trip to any of our connections for every 5 tickets you purchase</p>
-                    <p>Get 10% discount when you travel with a family member</p>
-                    <a href="{% url 'register' %}" class="btn btn-primary">Register Now</a>
+    {% if user.is_authenticated %}
+        <section id="services" class="py-5 text-primary">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1>Need to connect fast ?</h1>
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Nanaimo  -  Tofino</h2>
+                        <hr>
+                        <h5>4  trips a day both directions</h5>
+                        <p>Monday to Saturday</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Nanaimo  -  Tofino</h2>
+                        <hr>
+                        <h5>2 trips a day both directions</h5>
+                        <p>Monday to Saturday</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Nanaimo  -  Victoria</h2>
+                        <hr>
+                        <h5>4 trips a day both directions</h5>
+                        <p>Monday to Saturday</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% else %}
+        <section id="loyalty" class="py-5 text-primary">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1>Loyalty Program</h1>
+                        <hr>
+                        <p>Make changes to your reservations up to 2 hours before departure time</p>
+                        <p>Get a free trip to any of our connections for every 5 tickets you purchase</p>
+                        <p>Get 10% discount when you travel with a family member</p>
+                        <a href="{% url 'register' %}" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
 {% endblock %}

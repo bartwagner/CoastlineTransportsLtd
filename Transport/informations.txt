@@ -35,4 +35,17 @@ Languagens and tools
 Django - livraries: widget tweaks
 Python with autopep8
 
+python manage.py startapp booktrip -> put in settings app first
+python manage.py makemigration
+python manage.py sqlmigrate booktrip 0001 -> seeing the create table command
+python manage.py migrate
+
+
+
+
+
+
+
+
+
 
