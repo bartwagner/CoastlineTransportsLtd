@@ -40,12 +40,3 @@ python manage.py makemigration
 python manage.py sqlmigrate booktrip 0001 -> seeing the create table command
 python manage.py migrate
 
-
-
-
-
-
-
-
-
-
