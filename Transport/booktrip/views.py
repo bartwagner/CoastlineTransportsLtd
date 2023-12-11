@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from datetime import datetime
-from .models import Travel
+#from .models import Travel
 
 #from .models import DateTimeTravel
 
 def index(request):
-    travel = Travel.objects.first()
+ #   travel = Travel.objects.first()
 
-    print(travel)
+  #  print(travel)
 
     #dateTimeTravel = DateTimeTravel.objects.filter(date__gte=datetime.now().date()).order_by('-date')
 
