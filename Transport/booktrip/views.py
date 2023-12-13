@@ -11,11 +11,14 @@ from .models import LocalDestination
 from .models import DateTimeTravel
 
 def index(request):
-    yearDate = datetime.now().year
-    monthDate = datetime.now().month
-    dayDate = datetime.now().day
+
+
+
+    #yearDate = datetime.now().year
+    #monthDate = datetime.now().month
+    #dayDate = datetime.now().day
     
-    cal = HTMLCalendar().formatmonth(yearDate, monthDate, dayDate)
+    #cal = HTMLCalendar().formatmonth(yearDate, monthDate, dayDate)
 
     #dateTimeTravel = DateTimeTravel.objects.filter(date__gte=datetime.now().date()).order_by('-date')
     #print(dateTimeTravel.values_list('date', flat=True))
@@ -28,6 +31,6 @@ def index(request):
     #    'dateTimeTravel': dateTimeTravel
     #}
 
-    #return render(request, 'booktrip/booktrip.html', context)
-    return render(request, 'booktrip/booktrip.html', {'cal' : cal})
+    #return render(request, 'booktrip/booktrip.html', context)   , {'cal' : cal}
+    return render(request, 'booktrip/booktrip.html')
 
