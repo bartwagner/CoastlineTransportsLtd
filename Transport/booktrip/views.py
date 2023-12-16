@@ -1,36 +1,20 @@
 from django.shortcuts import render
-import calendar
-from calendar import HTMLCalendar
 from datetime import datetime
 
-from .models import TravelBoard
-from .models import TravelDestination
-from .models import Travel
-from .models import LocalBoard
-from .models import LocalDestination
 from .models import DateTimeTravel
+#from .models import TravelBoard
+#from .models import TravelDestination
+#from .models import Travel
+#from .models import LocalBoard
+#from .models import LocalDestination
+
 
 def index(request):
-
-
-
-    #yearDate = datetime.now().year
-    #monthDate = datetime.now().month
-    #dayDate = datetime.now().day
+    #Retrieve all instances of DateTimeTravel with dates greater than or equal to the current date.
+    date_time_travel_avaliable = DateTimeTravel.objects.filter(date__gte=datetime.today())
     
-    #cal = HTMLCalendar().formatmonth(yearDate, monthDate, dayDate)
+    #Create a dictionary with the available dates and the associated price for each one.
+    date_avaliable = [event.date.strftime('%Y-%m-%d') for event in date_time_travel_avaliable]
+    print(date_avaliable)
 
-    #dateTimeTravel = DateTimeTravel.objects.filter(date__gte=datetime.now().date()).order_by('-date')
-    #print(dateTimeTravel.values_list('date', flat=True))
-
-    #print(datetime.now().date())
-    #print(DateTimeTravel.objects.first().date)
-    #print(dateTimeTravel)
-
-    #context = {
-    #    'dateTimeTravel': dateTimeTravel
-    #}
-
-    #return render(request, 'booktrip/booktrip.html', context)   , {'cal' : cal}
-    return render(request, 'booktrip/booktrip.html')
-
+    return render(request, 'booktrip/booktrip.html', {'date_avaliable': date_avaliable })
