@@ -19,25 +19,21 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <form action="">
+                        {% csrf_token %}
                         <!-- Form Row 1 -->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
-                                {{cal|safe}}
-                                <!--
-                                <label class="">Date</label>
-                                <input type="date" id="date" name="dateTravel">
-                                
-
-                                <label class="sr-only">From</label>
-                                <select name="from" class="form-control">
-
-                                </select>
-                                -->
+                                <label for="eventDate">Departure date:</label>
+                                <input type="text" id="eventDate" name="eventDate" maxlength="0">
                             </div>
                         </div>
+                        <input type="submit" value="Send">
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        var datesAvailable = {{ date_avaliable|safe }};
+    </script>
 {% endblock %}
