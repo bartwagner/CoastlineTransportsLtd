@@ -12,10 +12,11 @@ function initializeDatePicker(datesAvailable) {
                 data: {'selectedDateText': selectedDateText},
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response.message);
+                    // Atualize o valor do parágrafo com o valor recebido
+                    $('#selectedDateParagraph').text('selected: ' + response.selected_date);
                 },
-                error: function(error){
-                    console.error('Erro ao enviar a data: ', error)
+                error: function(error) {
+                    console.error('Erro na solicitação AJAX:', error);
                 }
             });
         }

@@ -4,15 +4,24 @@ function initializeDatePicker(datesAvailable) {
         var isDateAvailable = datesAvailable.indexOf(dateString) !== -1;
         return [isDateAvailable, dateString];
     }
-  
     $("#eventDate").datepicker({
         beforeShowDay: enableDays,
         onSelect: function(selectedDateText) {
-            alert('You selected the date: ' + selectedDateText);
+            $.ajax({
+                url: 'handle-selected-date/',
+                data: {'selectedDateText': selectedDateText},
+                dataType: 'json',
+                success: function(response) {
+                    // Atualize o valor do parágrafo com o valor recebido
+                    $('#selectedDateParagraph').text('selected: ' + response.selected_date);
+                },
+                error: function(error) {
+                    console.error('Erro na solicitação AJAX:', error);
+                }
+            });
         }
     });
 }
-  
 $(document).ready(function() {
     initializeDatePicker(datesAvailable);
 });

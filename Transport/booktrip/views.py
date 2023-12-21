@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
+from django.http import JsonResponse
 
 from .models import DateTimeTravel
 #from .models import TravelBoard
@@ -15,6 +16,18 @@ def index(request):
     
     #Create a dictionary with the available dates and the associated price for each one.
     date_avaliable = [event.date.strftime('%Y-%m-%d') for event in date_time_travel_avaliable]
-    print(date_avaliable)
 
     return render(request, 'booktrip/booktrip.html', {'date_avaliable': date_avaliable })
+
+def handle_selected_date(request):
+    if request.method == 'GET' and 'selectedDateText' in request.GET:
+        print('111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111')
+        selected_date = request.GET['selectedDateText']
+        response_data = {'message': f'Selected date: {selected_date}'}
+
+        print(selected_date)
+        print(response_data)
+
+        return JsonResponse(response_data)
+    else:
+        return JsonResponse({'error': 'Invalid request'})
