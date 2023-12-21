@@ -16,7 +16,7 @@ function initializeDatePicker(datesAvailable) {
                     $('#selectedDateParagraph').text('selected: ' + response.selected_date);
                 },
                 error: function(error) {
-                    console.error('Erro na solicitação AJAX:', error);
+                    console.error('AJAX Error:', error);
                 }
             });
         }

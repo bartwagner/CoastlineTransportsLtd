@@ -21,12 +21,8 @@ def index(request):
 
 def handle_selected_date(request):
     if request.method == 'GET' and 'selectedDateText' in request.GET:
-        print('111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111')
         selected_date = request.GET['selectedDateText']
-        response_data = {'message': f'Selected date: {selected_date}'}
-
-        print(selected_date)
-        print(response_data)
+        response_data = {'selected_date': selected_date}
 
         return JsonResponse(response_data)
     else:
