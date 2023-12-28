@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 
 from datetime import datetime
-from django.http import JsonResponse
+from django.http import HttpResponse
 
 from .models import DateTimeTravel
 
@@ -38,14 +38,13 @@ def handle_selected_date(request):
             #selected_datetime = datetime.combine(date_time_travel.date, travel_board.time_board)
             #if selected_datetime < datetime.now(): I will check it after
 
-            response_data = {
-                'board': travel_board.board,
-            }
+            option_html = '<option value="" selected>Select the options below.</option>'
+            option_html += f'<option value="{travel_board.board}">{travel_board.board}</option>'
 
-            return JsonResponse(response_data)
+            return HttpResponse(option_html)
         
         except DateTimeTravel.DoesNotExist:
-            return JsonResponse({'error': 'No matching DateTimeTravel found for the selected date'})
+            return HttpResponse('<option value="">No matching travel found for the selected date</option>')
         
     else:
-        return JsonResponse({'error': 'Invalid request'})
+        return HttpResponse('<option value="" selected>Invalid request</option>')

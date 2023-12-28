@@ -10,9 +10,9 @@ function initializeDatePicker(datesAvailable) {
             $.ajax({
                 url: 'handle-selected-date/',
                 data: {'selectedDateText': selectedDateText},
-                dataType: 'json',
+                dataType: 'html',
                 success: function(response) {
-                    $('#selectBoard').html(`<option value="${response.board}" selected>${response.board}</option>`);
+                    $('#selectBoard').html(response);
                 },
                 error: function(error) {
                     console.error('AJAX Error:', error);
