@@ -17,8 +17,12 @@ def index(request):
     #Retrieve all instances of DateTimeTravel with dates greater than or equal to the current date.
     date_time_travel_avaliable = DateTimeTravel.objects.filter(date__gte=datetime.today())
     
-    #Create a dictionary with the available dates and the associated price for each one.
-    date_avaliable = [event.date.strftime('%Y-%m-%d') for event in date_time_travel_avaliable]
+    #Create a list of available dates, considering date and time conditions.
+    date_avaliable = []
+    for event in date_time_travel_avaliable:
+        selected_datetime = datetime.combine(event.date, event.travel.travelboard.time_board)
+        if selected_datetime > datetime.now():
+            date_avaliable.append(event.date.strftime('%Y-%m-%d'))
 
     return render(request, 'booktrip/booktrip.html', {'date_avaliable': date_avaliable })
 
