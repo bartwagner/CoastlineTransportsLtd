@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib import messages
 
 from datetime import datetime
 from django.http import HttpResponse
@@ -37,10 +36,6 @@ def handle_selected_date(request):
 
             #Now, you can retrieve the TravelBoard object associated with this DateTimeTravel.
             travel_board = date_time_travel.travel.travelboard
-
-            #Combine the selected date with the current time for comparison.
-            #selected_datetime = datetime.combine(date_time_travel.date, travel_board.time_board)
-            #if selected_datetime < datetime.now(): I will check it after
 
             option_html = '<option value="" selected>Select the options below.</option>'
             option_html += f'<option value="{travel_board.board}">{travel_board.board}</option>'
