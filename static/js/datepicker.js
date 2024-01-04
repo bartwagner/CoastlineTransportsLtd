@@ -8,7 +8,7 @@ function initializeDatePicker(datesAvailable) {
         beforeShowDay: enableDays,
         onSelect: function(selectedDateText) {
             $.ajax({
-                url: 'handle-selected-date/',
+                url: 'handle-selected-date-board/',
                 data: {'selectedDateText': selectedDateText},
                 dataType: 'html',
                 success: function(response) {
@@ -24,3 +24,25 @@ function initializeDatePicker(datesAvailable) {
 $(document).ready(function() {
     initializeDatePicker(datesAvailable);
 });
+
+function handleBoardSelection() {
+    var selectedBoard = $('#selectBoard').val();
+    var selectedDateText = $('#eventDate').val();
+
+    if (selectedBoard) {
+        $.ajax({
+            url: 'handle-selected-board-destination/',
+            data: {'selectedBoard': selectedBoard, 'selectedDateText': selectedDateText},
+            dataType: 'html',
+            success: function(response) {
+                $('#selectDestination').html(response);
+            },
+            error: function(error) {
+                console.error('AJAX Error:', error);
+            }
+        });
+    } else {
+        //Clean options if anyone board was selected
+        $('#selectDestination').html('<option value="" selected>Select the board first.</option>');
+    }
+}

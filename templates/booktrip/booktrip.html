@@ -14,24 +14,36 @@
             </div>
         </div>
     </section>
-    <section id="showcase-inner" class="showcase-search py-5">
+    <section id="showcase-inner" class="bg-light py-5">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-9 mx-auto">
                     <form action="">
                         {% csrf_token %}
                         <!-- Form Row 1 -->
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
-                                <label for="eventDate">Departure date:</label>
-                                <input type="text" id="eventDate" name="eventDate" maxlength="0" readonly>
-                                <label>Board:</label>
-                                <select id="selectBoard" name="selectBoard">
-                                    <option value="" selected>Select the options below.</option>
-                                </select>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="eventDate">Departure date:</label>
+                                    <input type="text" id="eventDate" name="eventDate" maxlength="0" class="form-control" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Board:</label>
+                                    <select id="selectBoard" name="selectBoard" class="form-control" onchange="handleBoardSelection()">
+                                        <option value="" selected>Select the date departure first.</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Destination:</label>
+                                    <select id="selectDestination" name="selectDestination" class="form-control">
+                                        <option value="" selected>Select the board first.</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <input type="submit" value="Send">
+                        <div class="text-center">
+                            <input type="submit" value="Send" class="btn btn-primary">
+                        </div>
                     </form>
                 </div>
             </div>
