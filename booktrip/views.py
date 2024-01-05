@@ -23,18 +23,22 @@ def handle_selected_date_board(request):
         try:
             #Try to retrieve the DateTimeTravel object for the selected date.
             selected_date = datetime.strptime(selected_date_text, '%m/%d/%Y').strftime('%Y-%m-%d')
-            date_time_travel = DateTimeTravel.objects.get(date=selected_date)
+            date_time_travels = DateTimeTravel.objects.filter(date=selected_date)
 
-            #Now, you can retrieve the TravelBoard object associated with this DateTimeTravel and send to display board and time board.
-            travel_board = date_time_travel.travel.travelboard
-            board = travel_board.board + ' - ' + str(travel_board.time_board)
-
+            #Initialize the option_html with the default option.
             option_html = '<option value="" selected>Select the options below.</option>'
-            option_html += f'<option value="{board}">{board}</option>'
+
+            #Iterate over all DateTimeTravel instances for the selected date, date_board and and board to concatenate.
+            for date_time_travel in date_time_travels:
+                #Retrieve the TravelBoard object associated with each DateTimeTravel.
+                travel_board = date_time_travel.travel.travelboard
+                board = travel_board.board + ' - ' + str(travel_board.time_board)
+                #Concatenate board and time_board and add it to the option_html.
+                option_html += f'<option value="{board}">{board}</option>'
 
             return HttpResponse(option_html)
         
-        except DateTimeTravel.DoesNotExist:
+        except (DateTimeTravel.DoesNotExist, ValueError):
             return HttpResponse('<option value="">No matching travel found for the selected date</option>')
         
     else:
@@ -46,14 +50,26 @@ def handle_selected_board_destination(request):
         selected_date_text = request.GET['selectedDateText']
 
         try:
+            #Try to retrieve the DateTimeTravel object for the selected date, board and time_board.
+            selected_date = datetime.strptime(selected_date_text, '%m/%d/%Y').strftime('%Y-%m-%d')
+            board, time_board = selected_board.split(' - ')
+            date_travel_destinations = DateTimeTravel.objects.filter(
+                date=selected_date,
+                travel__travelboard__board=board,
+                travel__travelboard__time_board=time_board
+            )
 
-            print(selected_date_text)
-            print(selected_board)
-
+            #Initialize the option_html with the default option.
             option_html = '<option value="" selected>Select the options below.</option>'
 
+            #Iterate over all DateTimeTravel instances for the selected date, date_destination and destination to concatenate.
+            for date_travel_destination in date_travel_destinations:
+                travel_destination = date_travel_destination.travel.traveldestination
+                destination = travel_destination.destination + ' - ' + str(travel_destination.time_destination)
+                option_html += f'<option value="{destination}">{destination}</option>'
+
             return HttpResponse(option_html)
-        except DateTimeTravel.DoesNotExist:
-            return HttpResponse('<option value="">No matching travel found for the selected date</option>')
+        except (DateTimeTravel.DoesNotExist, ValueError):
+            return HttpResponse('<option value="">No matching destinations found for the selected board and date</option>')
     else:
         return HttpResponse('<option value="" selected>Invalid request</option>')

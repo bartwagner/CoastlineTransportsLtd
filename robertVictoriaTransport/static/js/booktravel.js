@@ -13,6 +13,7 @@ function initializeDatePicker(datesAvailable) {
                 dataType: 'html',
                 success: function(response) {
                     $('#selectBoard').html(response);
+                    $('#selectDestination').html('<option value="" selected>Select the board first.</option>');
                 },
                 error: function(error) {
                     console.error('AJAX Error:', error);
