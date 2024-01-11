@@ -35,8 +35,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Destination:</label>
-                                    <select id="selectDestination" name="selectDestination" class="form-control">
+                                    <select id="selectDestination" name="selectDestination" class="form-control" onchange="handleDestinationSelection()">
                                         <option value="" selected>Select the board first.</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label>Local Board:</label>
+                                    <select id="selectLocalBoard" name="selectLocalBoard" class="form-control">
+                                        <option value="" selected>Select the destination first.</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Local Destination:</label>
+                                    <select id="selectLocalDestination" name="selectLocalDestination" class="form-control">
+                                        <option value="" selected>Select the destination first.</option>
                                     </select>
                                 </div>
                             </div>
